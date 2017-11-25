@@ -1,1 +1,131 @@
 
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora javascript</title>
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+
+.limpar{
+color: red;
+background-color: black;
+}
+
+body{background-color:gray;}
+
+.jumbotron{background-image:url("http://aptgadget.com/wp-content/uploads/2016/11/maths.jpg");
+}
+
+.tela{width:300px;
+	 height:50px;
+     font-size:30px;}
+
+.btn-danger {height: 100px;
+         			 width: 100px;
+         			 font-size: 50px;
+         			 text-align: center;
+                     color: black;}
+  
+.btn-warning {height: 100px;
+         			 width: 100px;
+         			 font-size: 50px;
+         			 text-align: center;
+                     color: black;}
+  
+.btn-sucess {height: 100px;
+         			 width: 100px;
+         			 font-size: 50px;
+         			 text-align: center;
+                     color: black;}
+  
+.btn-info { height: 100px;
+ 		  width:100px;
+  		  font-size: 50px;
+          text-align: center;
+          color: black;}
+         
+.op{
+
+}
+</style>
+</head>
+
+
+<body>
+	
+    
+<div class="jumbotron text-center">
+ 	<input type='text' class="tela" id='text'/> <br/><br>
+    
+    <button type="button" class="btn btn-sucess" onclick="numero(1)">1</button>
+    <button type="button" class="btn btn-sucess" onclick="numero(2)">2</button>
+    <button type="button" class="btn btn-sucess" onclick="numero(3)">3</button>
+    <button type="button" class="btn btn-info" onclick="operaçao('+')">+</button><br>
+    <button type="button" class="btn btn-sucess" onclick="numero(4)">4</button>
+    <button type="button" class="btn btn-sucess" onclick="numero(5)">5</button>
+    <button type="button" class="btn btn-sucess" onclick="numero(6)">6</button>
+    <button type="button" class="btn btn-info" onclick="operaçao('-')">-</button><br>
+    <button type="button" class="btn btn-sucess" onclick="numero(7)">7</button>
+    <button type="button" class="btn btn-sucess" onclick="numero(8)">8</button>
+    <button type="button" class="btn btn-sucess" onclick="numero(9)">9</button>
+    <button type="button" class="btn btn-info" onclick="operaçao('/')">/</button><br>
+    <button type="button" class="btn btn-danger" onclick="limpar()">C</button>
+    <button type="button" class="btn btn-sucess" onclick="numero(0)">0</button>
+    <button type="button" class="btn btn-warning" onclick="calcular()">=</button>
+    <button type="button" class="btn btn-info" onclick="operaçao('*')">*</button>
+</div>   
+
+</body>
+
+<script>
+	
+  var n = " "
+  var l = " "
+  
+  
+  
+  
+  function numero(n){
+  document.getElementById('text').value =  document.getElementById('text').value+n
+  
+  
+  }
+  
+  function operaçao(l){
+   document.getElementById('text').value += l 
+
+  }
+  
+  function limpar(){
+  
+  document.getElementById('text').value = ' ';
+  
+  }
+  
+  
+  
+  function calcular(){
+
+  var resultado = 0;
+  
+  resultado = document.getElementById('text').value;
+  
+  document.getElementById('text').value = ' ';
+  document.getElementById('text').value = eval(resultado);
+  
+  
+  
+  }
+  
+  
+  
+    
+    
+    
+    
+</script>
+
+</html>
